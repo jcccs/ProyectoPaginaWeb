@@ -9,8 +9,9 @@ body{
 }
 
 .contenedor{
-    max-width: auto;/*1000px*/
-    margin: 20px, auto;
+    
+    max-width:1000px;
+    margin: 20px auto;
     display: grid;
     grid-gap:20px;
     grid-template-columns: repeat(3,1fr);
