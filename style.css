@@ -1,0 +1,109 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color: black;
+    color:beige;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contenedor{
+    max-width: auto;/*1000px*/
+    margin: 20px, auto;
+    display: grid;
+    grid-gap:20px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,auto);
+    grid-template-areas:  
+    "nav nav nav"   
+    "contenido contenido sidebar"
+    "bloque1 bloque2 bloque2"
+    "footer footer footer";
+}
+.contenido{/*main*/
+    background-color: rgb(108, 143, 5);
+    padding: 20px;
+    border-radius: 10px;
+    grid-area: contenido;
+}
+
+nav{
+    background-color: rgb(106, 3, 3);
+    color: antiquewhite;
+    text-align: center;
+    grid-area: nav;
+    padding: 30px;
+    border-radius: 5px;
+    font-size:30px;   
+}
+
+.sidebar{
+    grid-area: sidebar;
+    background-color: rgb(110, 4, 117);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    color: rgb(111, 158, 158);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.bloque{
+    color:blanchedalmond;
+    text-align: left;
+    display:flex ;
+    flex-direction:column ;
+    align-items: center;
+    justify-content: center; 
+    border-radius: 5px;
+    padding: 20px;
+}
+
+#bloque1{
+    grid-area: bloque1;
+    background-color: rgb(5, 108, 51);
+}
+#bloque2{
+    grid-area: bloque2;
+    background-color: rgb(4, 137, 137);
+}
+
+footer{
+    background-color: rgb(128, 128, 166);
+    grid-area: footer;
+    padding: 40px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+@media screen and (max-width:768px){
+    body{
+        background-color: white;
+    }
+    .contenedor{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "nav"
+        "contenido"
+        "sidebar"
+        "bloque1"
+        "bloque2"
+        "footer"
+        ;
+    }
+}
+img{
+    /*display: block;*/
+    width: 350px;
+    height: 200px;  
+}
+.img2{
+    /*display: block;*/
+    width: 150px;
+    height: 100px;  
+}
