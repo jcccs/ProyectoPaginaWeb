@@ -13,4 +13,4 @@ function reproducirAudio(miSonido) {
             sonido.pause();
             sonido.currentTime = 0;
         }
-    }sfghjkl
+    }dfghjk
